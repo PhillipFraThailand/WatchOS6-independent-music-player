@@ -16,14 +16,14 @@ class PlaybackService: ObservableObject {
 //MARK: Singleton
         static let sharedInstance = PlaybackService()
         private init() {
-        self.player = AudioPlayer()
+        player = AudioPlayer()
     }
 
 //MARK: Properties
     var startFrom = 0
     let player: AudioPlayer?
     let session = AVAudioSession.sharedInstance()
-    var isPlaying = false { //Notify people abt playing. @state is for views and private generally. @environmentobject is global. we just need to notify
+    var isPlaying = false {
         didSet {
             print("isPlaying: \(self.isPlaying)")
             objectWillChange.send(self)
@@ -83,7 +83,7 @@ class PlaybackService: ObservableObject {
             print("reached end of list, get new chartspage")
         }
     }
-    
+    //change name startFrom fordi det ikke er sigende.
     func playerskipBackward(){
         if startFrom >= 1 {
             startFrom -= 1
@@ -145,7 +145,6 @@ class PlaybackService: ObservableObject {
               print("Loaded trackPreviews")
               self.trackPreviewList = trackPreviews
           }
-          
       }
     
       func preparePlaybackURL(startFrom: Int?) {

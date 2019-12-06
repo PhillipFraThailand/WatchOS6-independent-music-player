@@ -25,6 +25,7 @@ class TracklistProvider: TracklistProviderProtocol, /*PlaybackURLProviderProtoco
     private init() {
         print("TrackProvider init")
     }
+    
 //MARK: Properties
     var trackPreviews: Promise<[TrackPreview]>?
     var artistName: String? {
@@ -67,8 +68,8 @@ class TracklistProvider: TracklistProviderProtocol, /*PlaybackURLProviderProtoco
                }.then {
                    try $0!.getTrackChart()                       // try $0!.getAlbumChart()
                }.map {
-                 print("Loaded previews")
-                return $0.tracks //Might be v stupid to return here
+                 print("Loaded previews") // Stop here to show loadingView
+                return $0.tracks 
         }.ensure {
             self.isLoading = false
         }
@@ -114,7 +115,6 @@ class TracklistProvider: TracklistProviderProtocol, /*PlaybackURLProviderProtoco
     }
 }
                 
-
 //    func getPlaybackURLss(trackPreview: TrackPreview) -> Promise<PlaybackOption>{
 //           let track = trackPreview
 //            firstly {

@@ -30,6 +30,8 @@
 		764D38FE2356075500A12416 /* PlayPauseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D38FD2356075500A12416 /* PlayPauseButtonView.swift */; };
 		764FC132234C791100A40094 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FC131234C791100A40094 /* LoadingView.swift */; };
 		764FC134234C7DB600A40094 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FC133234C7DB600A40094 /* MotherView.swift */; };
+		76861D6323994AAF00D484E8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76861D6223994AAF00D484E8 /* ListView.swift */; };
+		76861DA2239A633700D484E8 /* HostinController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76861DA1239A633700D484E8 /* HostinController1.swift */; };
 		76F5CB332358612900E3BAB9 /* ForwardEndButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5CB322358612900E3BAB9 /* ForwardEndButtonView.swift */; };
 		76F5CB352358651900E3BAB9 /* BackwardEndButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5CB342358651900E3BAB9 /* BackwardEndButtonView.swift */; };
 		76F5CB372358664600E3BAB9 /* SpeakerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5CB362358664600E3BAB9 /* SpeakerButtonView.swift */; };
@@ -105,6 +107,8 @@
 		764D38FD2356075500A12416 /* PlayPauseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButtonView.swift; sourceTree = "<group>"; };
 		764FC131234C791100A40094 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		764FC133234C7DB600A40094 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		76861D6223994AAF00D484E8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		76861DA1239A633700D484E8 /* HostinController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostinController1.swift; sourceTree = "<group>"; };
 		76F5CB322358612900E3BAB9 /* ForwardEndButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardEndButtonView.swift; sourceTree = "<group>"; };
 		76F5CB342358651900E3BAB9 /* BackwardEndButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardEndButtonView.swift; sourceTree = "<group>"; };
 		76F5CB362358664600E3BAB9 /* SpeakerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerButtonView.swift; sourceTree = "<group>"; };
@@ -158,9 +162,9 @@
 			children = (
 				762C103D2328C9A9006F19C2 /* Models */,
 				762C103B2328C98B006F19C2 /* Views */,
+				76861DA4239A6CC400D484E8 /* Hosting Controllers */,
 				762C103C2328C99C006F19C2 /* Services */,
 				76491D9B2345EA5B00D63877 /* OldClasses */,
-				762C101F2328C7BA006F19C2 /* HostingController.swift */,
 				762C10212328C7BA006F19C2 /* ExtensionDelegate.swift */,
 				762C10232328C7BA006F19C2 /* NotificationController.swift */,
 				762C10252328C7BA006F19C2 /* NotificationView.swift */,
@@ -183,14 +187,15 @@
 		762C103B2328C98B006F19C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				762C10452328CA8E006F19C2 /* PlayerView.swift */,
 				76F5CB382358A23800E3BAB9 /* ArtistTrackView.swift */,
-				764D38FD2356075500A12416 /* PlayPauseButtonView.swift */,
-				76F5CB322358612900E3BAB9 /* ForwardEndButtonView.swift */,
 				76F5CB342358651900E3BAB9 /* BackwardEndButtonView.swift */,
-				76F5CB362358664600E3BAB9 /* SpeakerButtonView.swift */,
+				76F5CB322358612900E3BAB9 /* ForwardEndButtonView.swift */,
+				76861D6223994AAF00D484E8 /* ListView.swift */,
 				764FC131234C791100A40094 /* LoadingView.swift */,
 				764FC133234C7DB600A40094 /* MotherView.swift */,
+				762C10452328CA8E006F19C2 /* PlayerView.swift */,
+				764D38FD2356075500A12416 /* PlayPauseButtonView.swift */,
+				76F5CB362358664600E3BAB9 /* SpeakerButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,10 +203,10 @@
 		762C103C2328C99C006F19C2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				76491D952345E62800D63877 /* TracklistProvider.swift */,
-				76491D9D2345F1FF00D63877 /* PlaybackService.swift */,
 				76491D912341FAE100D63877 /* DefaultConfiguration.swift */,
 				76491D932341FCAF00D63877 /* DefaultSettings.swift */,
+				76491D9D2345F1FF00D63877 /* PlaybackService.swift */,
+				76491D952345E62800D63877 /* TracklistProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -229,6 +234,15 @@
 				762C103E2328CA2E006F19C2 /* NetworkService.swift */,
 			);
 			path = OldClasses;
+			sourceTree = "<group>";
+		};
+		76861DA4239A6CC400D484E8 /* Hosting Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76861DA1239A633700D484E8 /* HostinController1.swift */,
+				762C101F2328C7BA006F19C2 /* HostingController.swift */,
+			);
+			path = "Hosting Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +390,7 @@
 				76F5CB352358651900E3BAB9 /* BackwardEndButtonView.swift in Sources */,
 				762C10242328C7BA006F19C2 /* NotificationController.swift in Sources */,
 				762C10222328C7BA006F19C2 /* ExtensionDelegate.swift in Sources */,
+				76861DA2239A633700D484E8 /* HostinController1.swift in Sources */,
 				76F5CB372358664600E3BAB9 /* SpeakerButtonView.swift in Sources */,
 				76491D9E2345F1FF00D63877 /* PlaybackService.swift in Sources */,
 				764FC134234C7DB600A40094 /* MotherView.swift in Sources */,
@@ -385,6 +400,7 @@
 				762C10262328C7BA006F19C2 /* NotificationView.swift in Sources */,
 				76F5CB332358612900E3BAB9 /* ForwardEndButtonView.swift in Sources */,
 				76491D8D2341F59A00D63877 /* API.swift in Sources */,
+				76861D6323994AAF00D484E8 /* ListView.swift in Sources */,
 				76491D962345E62800D63877 /* TracklistProvider.swift in Sources */,
 				764D38FE2356075500A12416 /* PlayPauseButtonView.swift in Sources */,
 				76F5CB392358A23800E3BAB9 /* ArtistTrackView.swift in Sources */,

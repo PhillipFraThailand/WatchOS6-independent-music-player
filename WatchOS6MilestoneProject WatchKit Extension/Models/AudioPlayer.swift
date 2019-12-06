@@ -38,7 +38,6 @@ class AudioPlayer: NSObject, AudioPlayerProtocol, ObservableObject {
             }
     }
     
-
 //MARK: init
     override init() {
         print("AudioPlayer init")

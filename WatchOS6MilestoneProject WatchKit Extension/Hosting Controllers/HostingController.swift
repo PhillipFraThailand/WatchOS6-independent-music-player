@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 import SwiftUI
 
-// The hosting controller takes in a 'rootView' that we have set as PlayerView.
+// The hosting controller takes in a 'rootView' that we have set as Motherview.
 
 class HostingController: WKHostingController<MotherView> {
     override var body: MotherView {

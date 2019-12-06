@@ -16,6 +16,7 @@ struct PlayerView: View {
             Spacer()
             ArtistTrackView()
             Spacer()
+            
 //MARK:- Layer
             HStack {
                 Spacer()
@@ -26,13 +27,13 @@ struct PlayerView: View {
                 ForwardEndButtonView()
                 Spacer()
             }
-            
 //MARK:- Layer
             SpeakerButtonView()
-            
-        }
-            .accentColor(.green)
-        
+            //Maybe make a new struct view here
+//            struct listView {
+//                <#fields#>
+//
+        }.accentColor(.green)
 //MARK:- Outside VStack
     }
 }
