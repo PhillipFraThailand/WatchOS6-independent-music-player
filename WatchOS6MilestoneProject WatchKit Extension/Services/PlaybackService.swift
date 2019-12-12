@@ -29,6 +29,7 @@ class PlaybackService: ObservableObject {
             objectWillChange.send(self)
         }
     }
+    
     let objectWillChange = PassthroughSubject<PlaybackService, Never>()
     var trackPreviewList: [TrackPreview]? {
         didSet {
@@ -36,6 +37,8 @@ class PlaybackService: ObservableObject {
             objectWillChange.send(self)
         }
     }
+    
+    var trackModels = [TrackModel]()
     
 //MARK: Functions
     func playerPlay() {
@@ -142,8 +145,24 @@ class PlaybackService: ObservableObject {
     func prepareTrackPreviewPromises() {
           let trackPreviewList = TracklistProvider.sharedInstance.getTrackPreviewPromises()
           _ = trackPreviewList.done { trackPreviews in
-              print("Loaded trackPreviews")
-              self.trackPreviewList = trackPreviews
+                print("Loaded trackPreviews")
+                self.trackPreviewList = trackPreviews
+            
+            for TrackPreview in trackPreviewList.value! {
+                let trackmodel = TrackModel.init(name: TrackPreview.name,
+                                                 artistName: TrackPreview.artistName,
+                                                 albumName: TrackPreview.albumName,
+                                                 lengthInSeconds: TrackPreview.lengthInSeconds,
+                                                 genre: TrackPreview.genre,
+                                                 label: TrackPreview.label,
+                                                 releaseDate: TrackPreview.releaseDate,
+                                                 id: TrackPreview.id,
+                                                 availableInSubscription: TrackPreview.availableInSubscription,
+                                                 isrc: TrackPreview.isrc,
+                                                 popularity: TrackPreview.popularity)
+                self.trackModels.append(trackmodel)
+                print(self.trackModels)
+            }
           }
       }
     

@@ -9,11 +9,18 @@
 import SwiftUI
 
 struct ListView: View {
+    
     @ObservedObject var model: PlaybackService
     
     var body: some View {
-        Text("HostingController1")
-        
+   /*     List() {
+            ForEach(model.trackModels!) { trackmodel in
+                VStack {
+                    Text(trackmodel.name)
+                }
+            }
+        }*/
+        EmptyView()
     }
 }
 
@@ -21,4 +28,4 @@ struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView(model: PlaybackService.sharedInstance)
     }
-}
+} 

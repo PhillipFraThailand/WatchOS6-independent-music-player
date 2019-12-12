@@ -11,7 +11,7 @@ import SwiftUI
 
 struct MotherView: View {
     
-    @ObservedObject var tracklistProvider: TracklistProvider
+   @ObservedObject var tracklistProvider: TracklistProvider
     
     var body: some View {
     VStack {

@@ -32,6 +32,8 @@
 		764FC134234C7DB600A40094 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FC133234C7DB600A40094 /* MotherView.swift */; };
 		76861D6323994AAF00D484E8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76861D6223994AAF00D484E8 /* ListView.swift */; };
 		76861DA2239A633700D484E8 /* HostinController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76861DA1239A633700D484E8 /* HostinController1.swift */; };
+		76861DAC239E935D00D484E8 /* UILaunchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76861DAB239E935D00D484E8 /* UILaunchTest.swift */; };
+		76861DB2239FEF3100D484E8 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76861DB1239FEF3100D484E8 /* TrackModel.swift */; };
 		76F5CB332358612900E3BAB9 /* ForwardEndButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5CB322358612900E3BAB9 /* ForwardEndButtonView.swift */; };
 		76F5CB352358651900E3BAB9 /* BackwardEndButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5CB342358651900E3BAB9 /* BackwardEndButtonView.swift */; };
 		76F5CB372358664600E3BAB9 /* SpeakerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5CB362358664600E3BAB9 /* SpeakerButtonView.swift */; };
@@ -109,6 +111,10 @@
 		764FC133234C7DB600A40094 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		76861D6223994AAF00D484E8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		76861DA1239A633700D484E8 /* HostinController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostinController1.swift; sourceTree = "<group>"; };
+		76861DA9239E935D00D484E8 /* UILaunchTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UILaunchTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76861DAB239E935D00D484E8 /* UILaunchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILaunchTest.swift; sourceTree = "<group>"; };
+		76861DAD239E935D00D484E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76861DB1239FEF3100D484E8 /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 		76F5CB322358612900E3BAB9 /* ForwardEndButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardEndButtonView.swift; sourceTree = "<group>"; };
 		76F5CB342358651900E3BAB9 /* BackwardEndButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardEndButtonView.swift; sourceTree = "<group>"; };
 		76F5CB362358664600E3BAB9 /* SpeakerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerButtonView.swift; sourceTree = "<group>"; };
@@ -124,6 +130,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		76861DA6239E935D00D484E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -132,6 +145,7 @@
 			children = (
 				762C100D2328C7B7006F19C2 /* WatchOS6MilestoneProject WatchKit App */,
 				762C101C2328C7BA006F19C2 /* WatchOS6MilestoneProject WatchKit Extension */,
+				76861DAA239E935D00D484E8 /* UILaunchTest */,
 				762C10062328C7B7006F19C2 /* Products */,
 				76491D8E2341F64C00D63877 /* Frameworks */,
 			);
@@ -143,6 +157,7 @@
 				762C10052328C7B7006F19C2 /* WatchOS6MilestoneProject.app */,
 				762C10092328C7B7006F19C2 /* WatchOS6MilestoneProject WatchKit App.app */,
 				762C10182328C7BA006F19C2 /* WatchOS6MilestoneProject WatchKit Extension.appex */,
+				76861DA9239E935D00D484E8 /* UILaunchTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,9 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				762C103D2328C9A9006F19C2 /* Models */,
+				762C103C2328C99C006F19C2 /* Services */,
 				762C103B2328C98B006F19C2 /* Views */,
 				76861DA4239A6CC400D484E8 /* Hosting Controllers */,
-				762C103C2328C99C006F19C2 /* Services */,
 				76491D9B2345EA5B00D63877 /* OldClasses */,
 				762C10212328C7BA006F19C2 /* ExtensionDelegate.swift */,
 				762C10232328C7BA006F19C2 /* NotificationController.swift */,
@@ -215,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				762C104723290E4C006F19C2 /* AudioPlayer.swift */,
+				76861DB1239FEF3100D484E8 /* TrackModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +259,15 @@
 				762C101F2328C7BA006F19C2 /* HostingController.swift */,
 			);
 			path = "Hosting Controllers";
+			sourceTree = "<group>";
+		};
+		76861DAA239E935D00D484E8 /* UILaunchTest */ = {
+			isa = PBXGroup;
+			children = (
+				76861DAB239E935D00D484E8 /* UILaunchTest.swift */,
+				76861DAD239E935D00D484E8 /* Info.plist */,
+			);
+			path = UILaunchTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,13 +330,30 @@
 			productReference = 762C10182328C7BA006F19C2 /* WatchOS6MilestoneProject WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		76861DA8239E935D00D484E8 /* UILaunchTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76861DAE239E935D00D484E8 /* Build configuration list for PBXNativeTarget "UILaunchTest" */;
+			buildPhases = (
+				76861DA5239E935D00D484E8 /* Sources */,
+				76861DA6239E935D00D484E8 /* Frameworks */,
+				76861DA7239E935D00D484E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UILaunchTest;
+			productName = UILaunchTest;
+			productReference = 76861DA9239E935D00D484E8 /* UILaunchTest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		762C0FFF2328C7B7006F19C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Phillip Eismark";
 				TargetAttributes = {
@@ -323,6 +365,9 @@
 					};
 					762C10172328C7BA006F19C2 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					76861DA8239E935D00D484E8 = {
+						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
@@ -345,6 +390,7 @@
 				762C10042328C7B7006F19C2 /* WatchOS6MilestoneProject */,
 				762C10082328C7B7006F19C2 /* WatchOS6MilestoneProject WatchKit App */,
 				762C10172328C7BA006F19C2 /* WatchOS6MilestoneProject WatchKit Extension */,
+				76861DA8239E935D00D484E8 /* UILaunchTest */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +421,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		76861DA7239E935D00D484E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -382,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76861DB2239FEF3100D484E8 /* TrackModel.swift in Sources */,
 				762C10462328CA8E006F19C2 /* PlayerView.swift in Sources */,
 				762C10442328CA79006F19C2 /* PlaybackServiceOld.swift in Sources */,
 				76491D922341FAE100D63877 /* DefaultConfiguration.swift in Sources */,
@@ -404,6 +458,14 @@
 				76491D962345E62800D63877 /* TracklistProvider.swift in Sources */,
 				764D38FE2356075500A12416 /* PlayPauseButtonView.swift in Sources */,
 				76F5CB392358A23800E3BAB9 /* ArtistTrackView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76861DA5239E935D00D484E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76861DAC239E935D00D484E8 /* UILaunchTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +720,44 @@
 			};
 			name = Release;
 		};
+		76861DAF239E935D00D484E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32X9D5R5S7;
+				INFOPLIST_FILE = UILaunchTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PhillipFraThailand.UILaunchTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76861DB0239E935D00D484E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32X9D5R5S7;
+				INFOPLIST_FILE = UILaunchTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PhillipFraThailand.UILaunchTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -693,6 +793,15 @@
 			buildConfigurations = (
 				762C10392328C7BB006F19C2 /* Debug */,
 				762C103A2328C7BB006F19C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76861DAE239E935D00D484E8 /* Build configuration list for PBXNativeTarget "UILaunchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76861DAF239E935D00D484E8 /* Debug */,
+				76861DB0239E935D00D484E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

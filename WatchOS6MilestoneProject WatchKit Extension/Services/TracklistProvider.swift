@@ -41,7 +41,7 @@ class TracklistProvider: TracklistProviderProtocol, /*PlaybackURLProviderProtoco
             objectWillChange.send(self)
         }
     }
-
+    
 //MARK: Observable
     let objectWillChange = PassthroughSubject<TracklistProvider, Never>()
     var isLoading = false {
