@@ -22,7 +22,9 @@ class PlaybackService: ObservableObject {
 //MARK: Properties
     var startFrom = 0
     let player: AudioPlayer?
+    var trackModels = [TrackModel]()
     let session = AVAudioSession.sharedInstance()
+    
     var isPlaying = false {
         didSet {
             print("isPlaying: \(self.isPlaying)")
@@ -38,7 +40,6 @@ class PlaybackService: ObservableObject {
         }
     }
     
-    var trackModels = [TrackModel]()
     
 //MARK: Functions
     func playerPlay() {
@@ -80,26 +81,31 @@ class PlaybackService: ObservableObject {
             }.map { playbackoptions in
                 self.createPlayerItemFromLink(assetURL: (playbackoptions?.playbackUrl)!)
             }.done {
-                self.player?.replacePlayerItem()
+                self.replacePlayerItem()
             }
         } else {
             print("reached end of list, get new chartspage")
         }
     }
+    
     //change name startFrom fordi det ikke er sigende.
     func playerskipBackward(){
         if startFrom >= 1 {
             startFrom -= 1
             _ = firstly {
-                TracklistProvider.sharedInstance.getPlaybackURL(trackPreview: trackPreviewList![startFrom])
+                TracklistProvider.sharedInstance.getPlaybackURL(trackPreview: trackPreviewList![startFrom]) 
             }.map { playbackoptions in
                 self.createPlayerItemFromLink(assetURL: (playbackoptions?.playbackUrl)!)
             }.done {
-                self.player?.replacePlayerItem()
+                self.replacePlayerItem()
             }
         }  else {
            print("reached start of list")
         }
+    }
+    
+    func replacePlayerItem() {
+        player?.replacePlayerItem()
     }
     
     func speakerButton() {
@@ -149,21 +155,21 @@ class PlaybackService: ObservableObject {
                 self.trackPreviewList = trackPreviews
             
             for TrackPreview in trackPreviewList.value! {
-                let trackmodel = TrackModel.init(name: TrackPreview.name,
-                                                 artistName: TrackPreview.artistName,
-                                                 albumName: TrackPreview.albumName,
-                                                 lengthInSeconds: TrackPreview.lengthInSeconds,
-                                                 genre: TrackPreview.genre,
-                                                 label: TrackPreview.label,
-                                                 releaseDate: TrackPreview.releaseDate,
-                                                 id: TrackPreview.id,
-                                                 availableInSubscription: TrackPreview.availableInSubscription,
-                                                 isrc: TrackPreview.isrc,
-                                                 popularity: TrackPreview.popularity)
+                let trackmodel = TrackModel.init(
+                                    name: TrackPreview.name,
+                                    artistName: TrackPreview.artistName,
+                                    albumName: TrackPreview.albumName,
+                                    lengthInSeconds: TrackPreview.lengthInSeconds,
+                                    genre: TrackPreview.genre,
+                                    label: TrackPreview.label,
+                                    releaseDate: TrackPreview.releaseDate,
+                                    id: TrackPreview.id,
+                                    availableInSubscription: TrackPreview.availableInSubscription,
+                                    isrc: TrackPreview.isrc,
+                                    popularity: TrackPreview.popularity)
                 self.trackModels.append(trackmodel)
-                print(self.trackModels)
             }
-          }
+        }
       }
     
       func preparePlaybackURL(startFrom: Int?) {
