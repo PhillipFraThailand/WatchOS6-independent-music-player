@@ -17,10 +17,7 @@ struct ListView: View {
             ForEach(model.trackModels) { trackmodel in
                 VStack {
                     Text(trackmodel.artistName + ": " + trackmodel.name).onTapGesture {
-                        //Hvordan feedr jeg audioplayer : feed her ud fra id nr.
-                        // På id
-                        //Manipuler med begge model arrays
-                        //Kald så tracklistprovider med trackpreview
+                        print($0.id)
                     }
                 }
             }
